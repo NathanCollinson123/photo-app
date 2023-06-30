@@ -1,7 +1,11 @@
 import './App.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function App() {
+
+  useEffect(() => {
+    document.title = 'Shutter Speed Calculator';
+  }, []);
 
   const [calculation, setCalculation] = React.useState();
   const [times, setTimes] = React.useState(6);
