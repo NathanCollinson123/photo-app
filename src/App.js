@@ -1,25 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 
 function App() {
+
+  const [calculation, setCalculation] = React.useState(0);
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Input 
+        calculation = {calculation}
+        onCalculationChange = {setCalculation}
+      />  
+      <DisplayCalculation value={calculation} />
     </div>
   );
 }
+
+//get the input for the calulation from the user
+function Input({ calculation, onCalculationChange }) {
+  return (
+    <form>
+      <input type="number" value={calculation} name="calculation" onChange={(e) => onCalculationChange(e.target.value)}/>
+    </form>
+  );
+}
+
+function DisplayCalculation({ value }) {
+
+  value = value * 2;
+  return (
+    <div>{value}</div>
+  );
+}
+
+
 
 export default App;
