@@ -3,16 +3,23 @@ import React from 'react';
 
 function App() {
 
-  const [calculation, setCalculation] = React.useState(0);
+  const [calculation, setCalculation] = React.useState();
+  const [times, setTimes] = React.useState(6);
 
 
   return (
     <div className="App">
+      <h1>Shutter Speed Calculator</h1>
+
       <Input 
         calculation = {calculation}
         onCalculationChange = {setCalculation}
       />  
-      <DisplayCalculation value={calculation} />
+      <TimesField
+        times = {times}
+        onTimesChange = {setTimes}
+      />
+      <DisplayCalculation value={calculation} times={times} />
     </div>
   );
 }
@@ -21,16 +28,47 @@ function App() {
 function Input({ calculation, onCalculationChange }) {
   return (
     <form>
-      <input type="number" value={calculation} name="calculation" onChange={(e) => onCalculationChange(e.target.value)}/>
+      <input type="number" value={calculation} name="calculation" placeholder="Current Speed..." onChange={(e) => onCalculationChange(e.target.value)}/>
     </form>
   );
 }
 
-function DisplayCalculation({ value }) {
-
-  value = value * 2;
+function TimesField({ times, onTimesChange }) {
   return (
-    <div>{value}</div>
+    <form>
+      <input type="number" value={times} name="times" placeholder="Multiply by ..." onChange={(e) => onTimesChange(e.target.value)}/>
+    </form>
+  );
+}
+
+function DisplayCalculation({ value, times }) {
+  for (let i = 0; i < times; i++){
+    value = value * 2;
+  }
+  let minutes = value / 60;
+  let seconds = value % 60;
+
+  //calculate the minutes and seconds
+
+
+  return (
+    <div>
+      <h2>New Shutter Speed</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Seconds</th>
+            <th>Minutes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{value}</td>
+            <td>{minutes | 0}:{seconds}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   );
 }
 
