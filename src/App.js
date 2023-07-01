@@ -36,15 +36,16 @@ function App() {
 //get the input for the calulation from the user
 function Input({ calculation, onCalculationChange }) {
   return (
-    <form>
+    <form onSubmit={e => { e.preventDefault(); }}>
       <input type="number" value={calculation} name="calculation" placeholder="Current Speed..." onChange={(e) => onCalculationChange(e.target.value)}/>
     </form>
+    
   );
 }
 
 function TimesField({ times, onTimesChange }) {
   return (
-    <form>
+    <form onSubmit={e => { e.preventDefault(); }}>
       <input type="number" value={times} name="times" min={1} placeholder="Multiply by..." onChange={(e) => onTimesChange(e.target.value)}/>
     </form>
   );
