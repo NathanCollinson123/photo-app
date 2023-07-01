@@ -83,3 +83,8 @@ form .fraction_input {
   margin-top: auto;
   margin-bottom: auto;
 }
+
+.input_fields h3 {
+  margin:0;
+  padding:0;
+}

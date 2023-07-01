@@ -21,6 +21,7 @@ function App() {
 
       <div className='calculator'>
         <div className='input_fields'>
+          <h3>Current Shutter Speed</h3>
           <Input 
             calculation = {calculation}
             onCalculationChange = {setCalculation}
@@ -31,6 +32,7 @@ function App() {
             denominator={denominator}
             onDenominatorChange={setDenominator}
             />  
+          <h3>Times Multiplied</h3>
           <TimesField
             times = {times}
             onTimesChange = {setTimes}
