@@ -51,12 +51,19 @@ function TimesField({ times, onTimesChange }) {
 }
 
 function DisplayCalculation({ value, times }) {
-  for (let i = 0; i < times; i++){
-    value = value * 2;
+  //check to see if value is empty
+  let minutes = 0;
+  let seconds = 0;
+  if(value === undefined || value === null || value === ''){
+    value = 0;
   }
-  let minutes = value / 60;
-  let seconds = value % 60;
-
+  else{
+    for (let i = 0; i < times; i++){
+      value = value * 2;
+    }
+    minutes = value / 60;
+    seconds = value % 60;
+  }
   //calculate the minutes and seconds
   return (
     <div>
