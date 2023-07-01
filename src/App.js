@@ -15,15 +15,20 @@ function App() {
     <div className="App">
       <h1>Shutter Speed Calculator</h1>
 
-      <Input 
-        calculation = {calculation}
-        onCalculationChange = {setCalculation}
-      />  
-      <TimesField
-        times = {times}
-        onTimesChange = {setTimes}
-      />
-      <DisplayCalculation value={calculation} times={times} />
+
+      <div className='calculator'>
+        <div className='input_fields'>
+          <Input 
+            calculation = {calculation}
+            onCalculationChange = {setCalculation}
+          />  
+          <TimesField
+            times = {times}
+            onTimesChange = {setTimes}
+          />
+        </div>
+        <DisplayCalculation value={calculation} times={times} />
+      </div>
     </div>
   );
 }
@@ -53,12 +58,10 @@ function DisplayCalculation({ value, times }) {
   let seconds = value % 60;
 
   //calculate the minutes and seconds
-
-
   return (
     <div>
       <h2>New Shutter Speed</h2>
-      <table>
+      <table className='shutter_speeds'>
         <thead>
           <tr>
             <th>Seconds</th>
