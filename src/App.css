@@ -26,7 +26,6 @@
 
 body {
   background-color: #282c34;
-  color: white;
   height:100%;
 }
 
@@ -53,6 +52,7 @@ body {
 form {
   margin:auto;
   padding:10px;
+  width:200px;
 }
 
 input{
@@ -60,4 +60,26 @@ input{
   background-color: white;
   border: none;
   border-radius: 5px;
+  margin-bottom: 5%;
+}
+
+form .fraction_input {
+  margin:0;
+}
+
+#fractionInput {
+  width: 200px;
+  display:flex;
+  margin-top:0;
+}
+
+#fractionInput input {
+  width: 33%;
+  margin:5%;
+  margin-top: 0;
+}
+#fractionInput p {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
