@@ -45,7 +45,7 @@ function Input({ calculation, onCalculationChange }) {
 function TimesField({ times, onTimesChange }) {
   return (
     <form>
-      <input type="number" value={times} name="times" placeholder="Multiply by ..." onChange={(e) => onTimesChange(e.target.value)}/>
+      <input type="number" value={times} name="times" min={1} placeholder="Multiply by..." onChange={(e) => onTimesChange(e.target.value)}/>
     </form>
   );
 }

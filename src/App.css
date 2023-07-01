@@ -34,3 +34,30 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+.calculator {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgrey;
+  height:65%;
+  width: 70%;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.input_fields {
+  margin:auto;
+  padding:10px;
+}
+
+form {
+  margin:auto;
+  padding:10px;
+}
+
+input{
+  padding:10px;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+}
