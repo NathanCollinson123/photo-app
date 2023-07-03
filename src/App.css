@@ -2,13 +2,28 @@
   position:absolute;
   text-align: center;
   margin: 0 auto;
-  width: 80%;
+  width: 35%;
   background-color: silver;
   height:80%;
   left:10%;
   right: 10%;
   top: 10%;
   border-radius: 15px;
+}
+
+@media only screen and (max-width: 800px){
+  .App {
+    position:absolute;
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+    background-color: silver;
+    height:90%;
+    left:10%;
+    right: 10%;
+    top: 10%;
+    border-radius: 15px;
+  }
 }
 
 .App h1 {
