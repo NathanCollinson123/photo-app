@@ -9,6 +9,7 @@
   right: 10%;
   top: 10%;
   border-radius: 15px;
+  min-height: 550px;  
 }
 
 @media only screen and (max-width: 800px){
