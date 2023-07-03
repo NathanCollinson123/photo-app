@@ -1,3 +1,5 @@
+/* Main app styling */
+
 .App {
   position:absolute;
   text-align: center;
@@ -59,6 +61,8 @@ body {
   padding: 15px;
   border-radius: 15px;
 }
+
+/* Input fields */
 
 .input_fields {
   margin:auto;

@@ -7,6 +7,7 @@ function App() {
     document.title = 'Shutter Speed Calculator';
   }, []);
 
+  //Constants for the calculator states
   const [calculation, setCalculation] = useState();
   const [times, setTimes] = useState(6);
   const [fractionMode, setFractionMode] = useState(false);
@@ -17,8 +18,6 @@ function App() {
   return (
     <div className="App">
       <h1>Shutter Speed Calculator</h1>
-
-
       <div className='calculator'>
         <div className='input_fields'>
           <h3>Current Shutter Speed</h3>
@@ -49,6 +48,7 @@ function Input({ calculation, onCalculationChange, fractionMode, onFractionModeC
   if (fractionMode) {
     return (
       <form onSubmit={e => { e.preventDefault(); }}>
+        {/*Create more forms for input in fraction for numerator and denominator*/}
         <div id="fractionInput">
           <input className="fraction_input" type="number" min={1} value={numerator} name="numerator" onChange={(e) => onNumeratorChange(e.target.value)}/>
           <p className="fraction_input">/</p>
