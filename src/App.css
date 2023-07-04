@@ -14,24 +14,49 @@
   min-height: 550px;  
 }
 
-@media only screen and (max-width: 800px){
+.App h1 {
+  font-size: 5vh;
+  color: black;
+}
+
+.calculator {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lightgrey;
+  height:70%;
+  width: 70%;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+@media only screen and (max-width: 820px){
   .App {
     position:absolute;
     text-align: center;
     margin: 0 auto;
     width: 80%;
     background-color: silver;
-    height:90%;
+    height:85%;
     left:10%;
     right: 10%;
     top: 10%;
     border-radius: 15px;
   }
-}
 
-.App h1 {
-  font-size: 5vh;
-  color: black;
+  .App h1 {
+    font-size: 3vh;
+    color: black;
+  }
+
+  .calculator {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightgrey;
+    height:80%;
+    width: 70%;
+    padding: 15px;
+    border-radius: 15px;
+  }
 }
 .roots {
   display: flex;
@@ -52,15 +77,7 @@ body {
   margin-right: auto;
 }
 
-.calculator {
-  margin-left: auto;
-  margin-right: auto;
-  background-color: lightgrey;
-  height:65%;
-  width: 70%;
-  padding: 15px;
-  border-radius: 15px;
-}
+
 
 /* Input fields */
 
