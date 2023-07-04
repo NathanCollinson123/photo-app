@@ -50,9 +50,9 @@ function Input({ calculation, onCalculationChange, fractionMode, onFractionModeC
       <form onSubmit={e => { e.preventDefault(); }}>
         {/*Create more forms for input in fraction for numerator and denominator*/}
         <div id="fractionInput">
-          <input className="fraction_input" type="number" min={1} value={numerator} name="numerator" onChange={(e) => onNumeratorChange(e.target.value)}/>
+          <input className="fraction_input" type="number" min={1} step="1" value={numerator} name="numerator" onChange={(e) => onNumeratorChange(e.target.value)}/>
           <p className="fraction_input">/</p>
-          <input className="fraction_input" type="number" min={1} value={denominator} name="denominator" onChange={(e) => onDenominatorChange(e.target.value)}/>
+          <input className="fraction_input" type="number" min={1} step="1" value={denominator} name="denominator" onChange={(e) => onDenominatorChange(e.target.value)}/>
         </div>
         <label>
           <input 
@@ -67,7 +67,7 @@ function Input({ calculation, onCalculationChange, fractionMode, onFractionModeC
   }
   return (
     <form onSubmit={e => { e.preventDefault(); }}>
-      <input type="number" value={calculation} name="calculation" placeholder="Current Speed..." onChange={(e) => onCalculationChange(e.target.value)}/>
+      <input type="number" value={calculation} step=".01" name="calculation" placeholder="Current Speed..." onChange={(e) => onCalculationChange(e.target.value)}/>
       <label>
         <input 
           type="checkbox" 
