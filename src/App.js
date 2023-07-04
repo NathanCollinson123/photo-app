@@ -12,7 +12,7 @@ function App() {
   const [times, setTimes] = useState(6);
   const [fractionMode, setFractionMode] = useState(false);
   const [numerator, setNumerator] = useState(1);
-  const [denominator, setDenominator] = useState(60);
+  const [denominator, setDenominator] = useState(2);
 
 
   return (
@@ -111,6 +111,10 @@ function DisplayCalculation({ value, times, numerator, denominator, fractionMode
     }
     minutes = value / 60;
     seconds = value % 60;
+
+    //round the value to 1dp and seconds to nearest whole number
+    value = value.toFixed(1);
+    seconds = seconds.toFixed();
   }
   //calculate the minutes and seconds
   return (
